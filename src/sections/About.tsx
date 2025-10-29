@@ -15,8 +15,10 @@ export default function About() {
             ICPEP is a dynamic student organization fostering collaboration, innovation, and growth in computer engineering.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
 
+        {/* Feature Grid: This is the key layout section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {/* Map over the imported data and render one Card component for each item */}
           {chapterFeatures.map((feature, index) => (
             <FeatureCard 
               key={index}
