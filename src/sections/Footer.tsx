@@ -76,7 +76,7 @@ const Footer = () => {
             National Capital Region
           </p>
           <Separator className="mt-8" />
-          <p className="text-center text-xs md:text-sm my-4 font-sans">
+          <p className="text-center text-xs md:text-sm my-8 font-sans">
             © 2025 ICPEP SE - NCR. All rights reserved. | Creating Pioneers for
             Excellence.
           </p>
