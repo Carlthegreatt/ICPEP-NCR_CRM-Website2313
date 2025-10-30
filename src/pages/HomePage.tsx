@@ -1,6 +1,5 @@
 import Hero from "../sections/Hero";
 import LetterGlitch from "../components/LetterGlitch";
-import NavBar from "../sections/NavBar";
 
 function HomePage() {
   return (
@@ -16,7 +15,6 @@ function HomePage() {
         />
       </div>
       <div className="relative z-10">
-        <NavBar />
         <Hero />
       </div>
     </div>
