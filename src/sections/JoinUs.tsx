@@ -54,7 +54,7 @@ const JoinUs = () => {
     <section className="relative w-full flex justify-center items-center">
       <div className="container">
         <div className="w-full h-screen flex flex-col justify-center items-center gap-4 md:gap-8 p-12">
-          {/* faded circles */}
+          {/* blurred circles */}
           <div className="absolute -z-10 top-20 md:top-30 left-0 md:left-10 lg:left-20 blur-circle size-50 lg:size-60 rounded-full bg-primary/15 blur-2xl" />
           <div className="hidden md:block absolute -z-10 top-60 blur-circle size-20 lg:size-30 rounded-full bg-primary/15 blur-xl" />
           <div className="absolute -z-10 top-60 md:top-40 right-10 lg:right-20 blur-circle size-30 lg:size-40 rounded-full bg-primary/15 blur-xl" />
@@ -74,6 +74,11 @@ const JoinUs = () => {
               transition={{ duration: 0.5 }}
             />
           ))}
+
+          {/* small circles */}
+          <div className="absolute -z-10 size-3 md:size-5 top-1/3 left-1/7 bg-white rounded-full" />
+          <div className="absolute -z-10 size-3 md:size-5 top-1/7 right-1/7 bg-blue-300 rounded-full" />
+          <div className="absolute -z-10 size-3 md:size-5 bottom-1/5 right-1/9 bg-primary/50 rounded-full" />
 
           {/* main content */}
           <h1 className="text-4xl md:text-6xl text-primary text-center text-glow font-bold">
