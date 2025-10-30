@@ -20,11 +20,16 @@ function Hero() {
           A.Y. 2025-2026
         </p>
         <p className="text-sm sm:text-base md:text-lg">
-          ICPEP is a dynamic student organization fostering collaboration,{" "}
-          <br /> innovation, and growth in computer engineering.
+          ICPEP is a dynamic student organization fostering collaboration,
+          innovation, and growth in computer engineering.
         </p>
         <div className="flex flex-wrap gap-3 md:gap-4 justify-center md:justify-start">
-          <Button className="mt-4">Login</Button>
+          <Button
+            className="mt-4 text-primary-foreground bg-white"
+            variant="default"
+          >
+            Login
+          </Button>
           <Button
             className="mt-4 border border-opacity-100"
             style={{ borderColor: "#89E9FF" }}
