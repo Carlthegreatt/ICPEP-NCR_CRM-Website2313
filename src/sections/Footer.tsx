@@ -23,7 +23,7 @@ const Footer = () => {
                 </span>
               </div>
             </div>
-            <p className="md:hidden lg:block mt-8 text-sm md:text-lg leading-normal tracking-tight font-sans">
+            <p className="md:hidden lg:block mt-8 text-sm md:text-lg leading-normal tracking-tight ">
               Institute of Computer Engineers of The Philippines Student Edition
               – National Capital Region
             </p>
@@ -71,12 +71,12 @@ const Footer = () => {
         </div>
 
         <div className="w-full px-8 md:px-12 text-foreground/60">
-          <p className="hidden md:block lg:hidden mt-8 text-sm md:text-lg leading-normal tracking-tight font-sans">
+          <p className="hidden md:block lg:hidden mt-8 text-sm md:text-lg leading-normal tracking-tight ">
             Institute of Computer Engineers of The Philippines Student Edition –
             National Capital Region
           </p>
           <Separator className="mt-8" />
-          <p className="text-center text-xs md:text-sm my-8 font-sans">
+          <p className="text-center text-xs md:text-sm my-8 ">
             © 2025 ICPEP SE - NCR. All rights reserved. | Creating Pioneers for
             Excellence.
           </p>
