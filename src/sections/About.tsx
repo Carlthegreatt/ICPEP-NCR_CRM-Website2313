@@ -74,7 +74,6 @@ export default function About() {
               innovation, and growth in computer engineering.
             </div>
           </div>
-
           {/*mobile view cards */}
           <Accordion
             type="single"
