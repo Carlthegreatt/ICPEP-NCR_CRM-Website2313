@@ -75,7 +75,7 @@ export default function About() {
           >
             <AccordionItem
               value="about-our-chapter"
-              className="md:hidden space-y-2 border-none"
+              className="md:hidden space-y-4 border-none"
             >
               <AccordionTrigger className="p-0 flex justify-between items-center">
                 <h1 className="text-xl font-extrabold text-primary text-glow tracking-tight">
@@ -83,15 +83,21 @@ export default function About() {
                 </h1>
               </AccordionTrigger>
               <AccordionContent className="text-sm text-foreground/60 leading-6 md:leading-7">
-                ICPEP is a dynamic student organization fostering collaboration,
-                innovation, and growth in computer engineering.
+                <div className="p-4 rounded-lg bg-primary/10 border border-primary/15">
+                  ICPEP is a dynamic student organization fostering
+                  collaboration, innovation, and growth in computer engineering.
+                </div>
               </AccordionContent>
             </AccordionItem>
 
             {chapterFeatures.map((feature, i) => {
               const FeatureIcon = feature.icon;
               return (
-                <AccordionItem key={i} value={feature.title} className="ml-4">
+                <AccordionItem
+                  key={i}
+                  value={feature.title}
+                  className="border-none"
+                >
                   <AccordionTrigger>
                     <div className="flex justify-start items-center gap-2">
                       <FeatureIcon className="size-4 text-primary" />
@@ -101,7 +107,9 @@ export default function About() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-foreground/80 text-sm">
-                    {feature.description}
+                    <div className="p-4 rounded-lg bg-primary/10 border border-primary/15">
+                      {feature.description}
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               );
