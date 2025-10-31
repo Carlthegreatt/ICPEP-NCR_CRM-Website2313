@@ -12,7 +12,7 @@ function NavBar() {
   ];
 
   return (
-    <header className="fixed top-4 left-0 right-0 z-50 ">
+    <header className="fixed top-4 left-0 right-0 z-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-4 flex h-16 items-center justify-between rounded-xl border border-border/60 bg-background/50 backdrop-blur supports-backdrop-filter:bg-background/40">
           <div className="flex items-center gap-3">
@@ -95,7 +95,7 @@ function NavBar() {
 
       {/* Mobile menu overlay */}
       <div
-        className={`${
+        className={`absolute w-full ${
           open
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
