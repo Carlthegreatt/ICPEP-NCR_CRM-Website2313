@@ -1,6 +1,13 @@
 import { Separator } from "@/components/ui/separator";
 import { FaFacebookSquare } from "react-icons/fa";
 
+const quickLinks = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Join Us", href: "/join-us" },
+  { name: "Login", href: "#login" },
+];
+
 const Footer = () => {
   return (
     <footer className="w-full flex justify-center items-center">
@@ -8,7 +15,7 @@ const Footer = () => {
         <div className="w-full text-foreground/60 flex flex-col md:flex-row justify-between items-start gap-10 px-8 md:px-24 pt-8">
           {/* #2 */}
           <section className="flex-4 md:max-w-1/3">
-            <div className="flex flex-row justify-start items-center gap-8">
+            <div className="flex flex-row justify-start md:items-start items-center gap-8">
               <img
                 src="/ICpEP.SE Logo 3.png"
                 alt="icpep-logo"
@@ -23,7 +30,7 @@ const Footer = () => {
                 </span>
               </div>
             </div>
-            <p className="md:hidden lg:block mt-8 text-sm md:text-lg leading-normal tracking-tight ">
+            <p className="md:hidden lg:block mt-8 text-xs md:text-sm leading-normal tracking-tight ">
               Institute of Computer Engineers of The Philippines Student Edition
               – National Capital Region
             </p>
@@ -34,18 +41,17 @@ const Footer = () => {
             <h2 className="text-lg md:text-xl text-foreground font-extrabold tracking-tight">
               Quick Links
             </h2>
-            <a
-              href="/"
-              className="text-sm md:text-lg hover:underline transition-all duration-300"
-            >
-              Home
-            </a>
-            <a
-              href="/about"
-              className="text-sm md:text-lg hover:underline transition-all duration-300"
-            >
-              About
-            </a>
+            <div className="space-y-2 flex flex-col">
+              {quickLinks.map((quickLink, i) => (
+                <a
+                  key={i}
+                  href={quickLink.href}
+                  className="text-xs md:text-sm hover:underline transition-all duration-300"
+                >
+                  {quickLink.name}
+                </a>
+              ))}
+            </div>
           </section>
 
           {/* #3 */}
@@ -71,7 +77,7 @@ const Footer = () => {
         </div>
 
         <div className="w-full px-8 md:px-12 text-foreground/60">
-          <p className="hidden md:block lg:hidden mt-8 text-sm md:text-lg leading-normal tracking-tight ">
+          <p className="hidden md:block lg:hidden mt-8 text-xs md:text-sm leading-normal tracking-tight ">
             Institute of Computer Engineers of The Philippines Student Edition –
             National Capital Region
           </p>
