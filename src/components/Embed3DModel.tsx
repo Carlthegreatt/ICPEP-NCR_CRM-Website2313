@@ -9,7 +9,7 @@ const interactionRefs = {
 };
 
 function Model() {
-  const { scene } = useGLTF("/scene(1).glb");
+  const { scene } = useGLTF("/scene.glb");
   const meshRef = useRef<Group>(null);
   const baseRotationRef = useRef({ x: Math.PI / 6, y: Math.PI / 5.5, z: 0 });
 

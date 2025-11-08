@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import FeatureCard from "../components/featureCard";
+import FeatureCard from "../components/FeatureCard";
 import { HiLightningBolt } from "react-icons/hi";
 import { FaHeart } from "react-icons/fa6";
 import { GiGraduateCap } from "react-icons/gi";

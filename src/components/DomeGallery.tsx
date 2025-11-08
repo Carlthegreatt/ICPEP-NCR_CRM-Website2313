@@ -42,39 +42,39 @@ type ItemDef = {
 
 const DEFAULT_IMAGES: ImageItem[] = [
   {
-    src: "/school-logos/dlsu 1.png",
+    src: "/school-logos/dlsu.png",
     alt: "DLSU Logo",
   },
   {
-    src: "/school-logos/FEU_Tech_official_seal 1.png",
+    src: "/school-logos/feu-tech-official-seal.png",
     alt: "FEU Tech Logo",
   },
   {
-    src: "/school-logos/ue 1.png",
+    src: "/school-logos/ue.png",
     alt: "UE Logo",
   },
   {
-    src: "/school-logos/dlsu 1.png",
+    src: "/school-logos/dlsu.png",
     alt: "DLSU Logo",
   },
   {
-    src: "/school-logos/tip 1.png",
+    src: "/school-logos/tip.png",
     alt: "TIP Logo",
   },
   {
-    src: "/school-logos/Mapua_Uni_logo.svg 1.png",
+    src: "/school-logos/mapua-uni-logo.svg.png",
     alt: "Mapua Logo",
   },
   {
-    src: "/school-logos/pup logo 1.png",
+    src: "/school-logos/pup-logo.png",
     alt: "PUP Logo",
   },
   {
-    src: "/school-logos/plm 1.png",
+    src: "/school-logos/plm.png",
     alt: "PLM Logo",
   },
   {
-    src: "/school-logos/colegio de muntinlupa 1.png",
+    src: "/school-logos/colegio-de-muntinlupa.png",
     alt: "Muntinlupa Logo",
   },
   {
