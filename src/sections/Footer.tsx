@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { FaFacebookSquare } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
+import logo from "@/assets/images/icpep-se.png";
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
           <section className="w-full md:flex-1 md:max-w-md lg:max-w-lg">
             <div className="flex flex-row justify-start items-center gap-3 sm:gap-4 md:gap-6">
               <img
-                src="/icpep-se.png"
+                src={logo}
                 alt="icpep-logo"
                 className="w-14 sm:w-16 md:w-20 lg:w-[81px] aspect-square shrink-0"
               />

@@ -7,7 +7,13 @@ function Hero() {
     <div className="h-screen text-foreground pt-20 flex flex-col md:flex-row items-center justify-center m-auto px- md:px-8 gap-8 md:gap-0 text-center md:text-left">
       <div className="w-full md:w-1/2">
         <div className="relative w-full h-64 sm:h-80 md:h-[80vh]  space-y-8 md:space-y-0">
-          <Suspense fallback={null}>
+          <Suspense
+            fallback={
+              <div className="flex items-center justify-center h-full">
+                <div className="h-10 w-10 animate-spin rounded-full border-4 border-[#89E9FF] border-t-transparent" />
+              </div>
+            }
+          >
             <Embed3DModel />
           </Suspense>
         </div>

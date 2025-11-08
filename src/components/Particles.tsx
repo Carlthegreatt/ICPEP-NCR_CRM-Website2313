@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Renderer, Camera, Geometry, Program, Mesh } from 'ogl';
 
-import './particles.css';
+import '@/assets/styles/particles.css';
 
 interface ParticlesProps {
   particleCount?: number;

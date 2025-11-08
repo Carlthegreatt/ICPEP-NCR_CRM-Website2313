@@ -1,7 +1,24 @@
 import { useEffect, useMemo, useRef, useCallback } from "react";
 import { useGesture } from "@use-gesture/react";
 import { Button } from "./ui/button";
-import { Link } from "react-router-dom";
+
+// Import school logos
+import dlsuLogo from "@/assets/images/school-logos/dlsu.png";
+import feuTechLogo from "@/assets/images/school-logos/feu-tech-official-seal.png";
+import ueLogo from "@/assets/images/school-logos/ue.png";
+import tipLogo from "@/assets/images/school-logos/tip.png";
+import mapuaLogo from "@/assets/images/school-logos/mapua-uni-logo.svg.png";
+import pupLogo from "@/assets/images/school-logos/pup-logo.png";
+import plmLogo from "@/assets/images/school-logos/plm.png";
+import colegioLogo from "@/assets/images/school-logos/colegio-de-muntinlupa.png";
+
+// Import memory images
+import memory1 from "@/assets/images/memories/1.jpg";
+import memory2 from "@/assets/images/memories/2.jpg";
+import memory3 from "@/assets/images/memories/3.jpg";
+import memory4 from "@/assets/images/memories/4.jpg";
+import memory5 from "@/assets/images/memories/5.jpg";
+import memory6 from "@/assets/images/memories/6.jpg";
 
 type ImageItem = string | { src: string; alt?: string };
 
@@ -42,63 +59,63 @@ type ItemDef = {
 
 const DEFAULT_IMAGES: ImageItem[] = [
   {
-    src: "/school-logos/dlsu.png",
+    src: dlsuLogo,
     alt: "DLSU Logo",
   },
   {
-    src: "/school-logos/feu-tech-official-seal.png",
+    src: feuTechLogo,
     alt: "FEU Tech Logo",
   },
   {
-    src: "/school-logos/ue.png",
+    src: ueLogo,
     alt: "UE Logo",
   },
   {
-    src: "/school-logos/dlsu.png",
+    src: dlsuLogo,
     alt: "DLSU Logo",
   },
   {
-    src: "/school-logos/tip.png",
+    src: tipLogo,
     alt: "TIP Logo",
   },
   {
-    src: "/school-logos/mapua-uni-logo.svg.png",
+    src: mapuaLogo,
     alt: "Mapua Logo",
   },
   {
-    src: "/school-logos/pup-logo.png",
+    src: pupLogo,
     alt: "PUP Logo",
   },
   {
-    src: "/school-logos/plm.png",
+    src: plmLogo,
     alt: "PLM Logo",
   },
   {
-    src: "/school-logos/colegio-de-muntinlupa.png",
+    src: colegioLogo,
     alt: "Muntinlupa Logo",
   },
   {
-    src: "/memories/1.jpg",
+    src: memory1,
     alt: "Memory 1",
   },
   {
-    src: "/memories/2.jpg",
+    src: memory2,
     alt: "Memory 2",
   },
   {
-    src: "/memories/3.jpg",
+    src: memory3,
     alt: "Memory 3",
   },
   {
-    src: "/memories/4.jpg",
+    src: memory4,
     alt: "Memory 4",
   },
   {
-    src: "/memories/5.jpg",
+    src: memory5,
     alt: "Memory 5",
   },
   {
-    src: "/memories/6.jpg",
+    src: memory6,
     alt: "Memory 6",
   },
 ];
@@ -137,7 +154,7 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
   if (pool.length === 0) {
     return coords.map((c) => ({ ...c, src: "", alt: "" }));
   }
-  if (pool.length > totalSlots) {
+  if (pool.length > totalSlots && import.meta.env.DEV) {
     console.warn(
       `[DomeGallery] Provided image count (${pool.length}) exceeds available tiles (${totalSlots}). Some images will not be shown.`
     );
@@ -1087,7 +1104,9 @@ export default function DomeGallery({
               variant="outline"
               asChild
             >
-              <Link to="https://passport-icpepsencr.duckdns.org">Register</Link>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Register
+              </a>
             </Button>
           </div>
 

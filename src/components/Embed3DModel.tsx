@@ -1,4 +1,4 @@
-import { Suspense, useRef, useEffect } from "react";
+import { Suspense, useRef, useEffect, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
 import { Group, Color, MeshStandardMaterial } from "three";
@@ -9,13 +9,31 @@ const interactionRefs = {
 };
 
 function Model() {
-  const { scene } = useGLTF("/scene.glb");
+  const [error, setError] = useState<Error | null>(null);
+
+  let scene;
+  try {
+    const gltf = useGLTF("/scene.glb");
+    scene = gltf.scene;
+  } catch (err) {
+    setError(err as Error);
+  }
+
   const meshRef = useRef<Group>(null);
   const baseRotationRef = useRef({ x: Math.PI / 6, y: Math.PI / 5.5, z: 0 });
 
+  if (error) {
+    console.error("Failed to load 3D model:", error);
+    return null;
+  }
+
+  if (!scene) {
+    return null;
+  }
+
   useEffect(() => {
     if (scene) {
-      scene.traverse((child) => {
+      scene.traverse((child: any) => {
         if (child instanceof MeshStandardMaterial) {
           child.metalness = 0.8;
           child.roughness = 0.2;

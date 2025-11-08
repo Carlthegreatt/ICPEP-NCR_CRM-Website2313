@@ -11,6 +11,11 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  preview: {
+    port: 4173,
+    strictPort: false,
+    host: true,
+  },
   build: {
     chunkSizeWarningLimit: 1200,
     rollupOptions: {

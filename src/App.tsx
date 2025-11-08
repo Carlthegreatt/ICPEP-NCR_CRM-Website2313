@@ -28,7 +28,13 @@ const AnimatedRoutes = () => {
                 exit={{ opacity: 0, y: -24 }}
                 transition={{ duration: 0.35, ease: "easeInOut" }}
               >
-                <Suspense fallback={null}>{route.element}</Suspense>
+                <Suspense fallback={
+                  <div className="flex items-center justify-center min-h-screen">
+                    <div className="h-10 w-10 animate-spin rounded-full border-4 border-[#89E9FF] border-t-transparent" />
+                  </div>
+                }>
+                  {route.element}
+                </Suspense>
               </motion.div>
             }
           />
